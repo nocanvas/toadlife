@@ -19,11 +19,19 @@ from ens import ENS
 ns = ENS.fromWeb3(web3)
 
 # look up the hex representation of the address for a name
-eth_ens = 'vegsurfer.eth'
+
+eth_ens = input ("Enter an ENS: ")
+
 eth_address = ns.address(eth_ens)
 
 
 
 totalToads = contract.functions.balanceOf(eth_address).call()
 
-print (eth_ens + ' has ' + str(totalToads) + ' toadz. He is gmi.')
+
+if totalToads > 0:
+	gmiValue = "gmi"
+else:
+	gmiValue = "ngmi"
+
+print (eth_ens + ' has ' + str(totalToads) + ' toadz. They are ' + gmiValue + '.')
