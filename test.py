@@ -1,6 +1,6 @@
 import json
 from web3 import Web3
-import infura
+import key
 
 web3 = Web3(Web3.HTTPProvider(infura.infura_url))
 
